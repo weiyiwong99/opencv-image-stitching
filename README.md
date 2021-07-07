@@ -1,0 +1,1 @@
+# opencv-image-stitching

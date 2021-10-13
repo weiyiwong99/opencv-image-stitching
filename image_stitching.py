@@ -30,6 +30,9 @@ if img1 is not None and img2 is not None:
     img1 = cv2.imdecode(file_bytes1, 1)
     file_bytes2 = np.asarray(bytearray(img2.read()), dtype=np.uint8)
     img2 = cv2.imdecode(file_bytes2, 1)
+
+    img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
+    img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
     
     img1_gray = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
     img2_gray = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
